@@ -1,0 +1,106 @@
+/* style.css para new_video.html */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .new-video-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .new-video-page h1 {
+    text-align: center;
+  }
+  
+  .file-upload-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .file-upload-box {
+    flex: 1;
+    padding: 200px;
+    border: 2px dashed #000000;
+    background-color: rgb(226, 220, 220);
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 20px;
+  }
+  
+  .file-upload-box label {
+    display: block;
+    cursor: pointer;
+    border-radius: 100%; /* Hace que el botón sea circular */
+    background-color: #3498db; /* Color de fondo azul claro */
+    padding: 40px; /* Ajusta el tamaño del botón según sea necesario */
+    color: #ffffff; /* Color del texto */
+    align-items: center;
+  }
+  
+  .file-upload-box span {
+    font-size: 40px; /* Tamaño del símbolo "+" */
+    line-height: 1; /* Ajusta la altura de línea según sea necesario */
+    align-items: center;
+  }
+  
+  .file-upload-box input {
+    display: none;
+  }
+  
+  .breed-input-container,
+  .gender-checkboxes {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .breed-input-container {
+    flex: 1;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .gender-checkboxes {
+    flex-direction: column;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-container button{
+    transition: all .5s ease-in-out;
+    display: block;
+  }
+
+  .button-container button:hover{
+    transform: scale(1.3);
+  }
+  .back-button {
+    background-color: #e74c3c;
+    color: #ffffff;
+  }
+  
+  .process-button {
+    background-color: #2ecc71;
+    color: #ffffff;
+  }
+  
