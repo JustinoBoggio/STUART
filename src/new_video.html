@@ -12,37 +12,53 @@
     <object type="text/html" data="header.html"></object>
     <!-- Nuevo Video Page -->
     <div class="new-video-page">
-        <h1>Inserte su Video</h1>
-            <main>
-        <div class="file-upload-container">
-            <div class="file-upload-box">
-                <label for="file-input">
-                    <span>+</span>
-                    
-                </label>
-                <input type="file" id="file-input">
+        <main>
+            <div class="file-upload-container">
+                <h1>Inserte su Video</h1>
+                <div class="file-upload-box">
+                    <label for="file-input">
+                        <span>+</span>
+
+                    </label>
+                    <input type="file" id="file-input">
+                </div>
             </div>
-        </div>
-
-        <div class="breed-input-container">
-            <label for="breed">Raza</label>
-            <input type="text" id="breed" placeholder="Ingrese la raza">
-        </div>
-
-        <div class="gender-checkboxes">
-            <label>
-                <input type="checkbox"> Hembra
-            </label>
-            <label>
-                <input type="checkbox"> Macho
-            </label>
-        </div>
-        <!-- Botones al final de la página -->
-        <div class="button-container">
-            <button class="back-button">Atras</button>
-            <button class="process-button">Procesar Video</button>
-        </div>
-    </main>
+            <div class="breed-input-container">
+                <label for="breed">Raza</label>
+                <input type="text" id="breed" placeholder="Ingrese la raza">
+            </div>
+            <div class="checkboxes">
+                <label for="gender">Sexo</label>
+                <label>
+                    <input type="checkbox"> Hembra
+                </label>
+                <label>
+                    <input type="checkbox"> Macho
+                </label>
+            </div>
+            <div class="checkboxes">
+                <label for="proof">Tipo de Prueba</label>
+                <label>
+                    <input type="checkbox"> Condición Original
+                </label>
+                <label>
+                    <input type="checkbox"> Dosis Neurodegenerativa
+                </label>
+                <label>
+                    <input type="checkbox"> Probiotico Aplicado
+                </label>
+            </div>
+            <div class="dosis-input-container">
+                <label for="dosis">Dosis</label>
+                <input type="text" id="dosis" placeholder="Ingrese la cantidad">
+                <input type="text" id="dosis" placeholder="Ingrese el nombre de la dosis aplicada">
+            </div>
+            <!-- Botones al final de la página -->
+            <div class="button-container">
+                <button class="back-button">Atras</button>
+                <button class="process-button">Procesar Video</button>
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>

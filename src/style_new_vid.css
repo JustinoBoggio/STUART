@@ -1,5 +1,5 @@
 /* style.css para new_video.html */
-
+/*
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,7 +17,7 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-  }
+  }*/
   
   .new-video-page h1 {
     text-align: center;
@@ -26,16 +26,21 @@ body {
   .file-upload-container {
     display: flex;
     margin-bottom: 20px;
+    width: 50%;
   }
   
   .file-upload-box {
+    display: flex;
     flex: 1;
-    padding: 200px;
+    align-items: center;
+    /*height: 50vh;*/
+    padding: 50px;
     border: 2px dashed #000000;
     background-color: rgb(226, 220, 220);
     border-radius: 10px;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 10px;
+    width: 25%;
   }
   
   .file-upload-box label {
@@ -43,13 +48,13 @@ body {
     cursor: pointer;
     border-radius: 100%; /* Hace que el botón sea circular */
     background-color: #3498db; /* Color de fondo azul claro */
-    padding: 40px; /* Ajusta el tamaño del botón según sea necesario */
+    padding: 20px; /* Ajusta el tamaño del botón según sea necesario */
     color: #ffffff; /* Color del texto */
     align-items: center;
   }
   
   .file-upload-box span {
-    font-size: 40px; /* Tamaño del símbolo "+" */
+    font-size: 20px; /* Tamaño del símbolo "+" */
     line-height: 1; /* Ajusta la altura de línea según sea necesario */
     align-items: center;
   }
@@ -59,7 +64,8 @@ body {
   }
   
   .breed-input-container,
-  .gender-checkboxes {
+  .dosis-input-container,
+  .checkboxes {
     display: flex;
     margin-bottom: 20px;
   }
@@ -69,8 +75,15 @@ body {
     flex-direction: column;
     margin-right: 20px;
   }
+
+  .dosis-input-container {
+    flex: 1;
+    flex-direction: column;
+    margin-top : 1%;
+    margin-right: 20px;
+  }
   
-  .gender-checkboxes {
+  .checkboxes {
     flex-direction: column;
   }
   
@@ -104,3 +117,11 @@ body {
     color: #ffffff;
   }
   
+  /* Aplicar espacio inferior a los inputs directamente */
+input {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 10px;
+}
