@@ -13,14 +13,13 @@
     <!-- Nuevo Video Page -->
     <div class="new-video-page">
         <main>
+            <h1>Inserte su Video</h1>
             <div class="file-upload-container">
-                <h1>Inserte su Video</h1>
-                <div class="file-upload-box">
+                <div class="file-upload-box" id="file-upload-box">
                     <label for="file-input">
                         <span>+</span>
-
                     </label>
-                    <input type="file" id="file-input">
+                    <input type="file" id="file-input" onchange="displayFileDetails()">
                 </div>
             </div>
             <div class="breed-input-container">
@@ -56,11 +55,19 @@
             <!-- Botones al final de la página -->
             <div class="button-container">
                 <button class="back-button">Atras</button>
-                <button class="process-button">Procesar Video</button>
+                <button class="process-button" onclick="startProcessing()">Procesar Video</button>
+            </div>
+            <!-- Modal para la barra de carga y el botón de cancelar -->
+            <div id="progress-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="cancelProcessing()">&times;</span>
+                    <p>Procesando video... <span id="progress">0%</span> completado</p>
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
             </div>
         </main>
     </div>
-    <script src="script.js"></script>
+    <script src="script_new_vid.js"></script>
 </body>
 
 </html>

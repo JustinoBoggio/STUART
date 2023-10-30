@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_results.css">
+  <script defer src="script_results.js"></script>
+  <title>Resultados</title>
+</head>
+<body>
+  <!-- Incluir el header -->
+  <div class="header-container">
+    <object type="text/html" data="header.html"></object>
+  </div>
+  <main>
+    <!-- Fecha actual arriba a la derecha -->
+    <span id="current-date"></span>
+    <h1 class="centered">Resultados</h1>
+
+    <!-- Detalles a la izquierda -->
+    <div class="results-details">
+      <div class="parameter">
+        <label>Raza:</label>
+        <span id="raza">Calculando...</span>
+      </div>
+      <div class="parameter">
+        <label>Sexo:</label>
+        <span id="sexo">Calculando...</span>
+      </div>
+      <div class="parameter">
+        <label>Tiempo Total:</label>
+        <span id="tiempo-total">Calculando...</span>
+      </div>
+      <div class="parameter">
+        <label>Distancia Recorrida:</label>
+        <span id="distancia-recorrida">Calculando...</span>
+      </div>
+      <div class="parameter">
+        <label>Tiempo de Reposo:</label>
+        <span id="tiempo-reposo">Calculando...</span>
+      </div>
+      <div class="parameter">
+        <label>Tiempo de Curiosidad:</label>
+        <span id="tiempo-curiosidad">Calculando...</span>
+      </div>
+    </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="results-image">
+      <img src="images/map.png" alt="Resultado">
+    </div>
+  </main>
+</body>
+</html>
