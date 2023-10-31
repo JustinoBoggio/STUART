@@ -127,9 +127,6 @@ body {
     display: none;
   }
   
-
-
-  
 .breed-input-container,
 .gender-checkboxes {
   display: flex;
@@ -145,10 +142,6 @@ body {
 .gender-checkboxes {
   flex-direction: column;
 }
-
-
-
-
 
   .breed-input-container {
     margin-bottom: 20px;

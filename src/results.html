@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style_results.css">
   <script defer src="script_results.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.zoom').hover(function() {
+            $(this).addClass('transition');
+        }, function() {
+            $(this).removeClass('transition');
+        });
+    });
+    </script>-->
   <title>Resultados</title>
 </head>
+
 <body>
   <!-- Incluir el header -->
   <div class="header-container">
@@ -14,7 +26,9 @@
   </div>
   <main>
     <!-- Fecha actual arriba a la derecha -->
-    <span id="current-date"></span>
+    <div class="date">
+      <span id="current-date"></span>
+    </div>
     <h1 class="centered">Resultados</h1>
 
     <!-- Detalles a la izquierda -->
@@ -47,8 +61,33 @@
 
     <!-- Imagen a la derecha -->
     <div class="results-image">
-      <img src="images/map.png" alt="Resultado">
+      <img id="map" src="images/map.png" alt="Resultado">
+    </div>
+
+    <!-- Botones al final de la página -->
+    <div class="action-buttons">
+      <button id="descartarBtn" onclick="mostrarModal('descartarModal')">Volver al menu principal</button>
+      <button id="guardarBtn" onclick="mostrarModal('guardarModal')">Guardar resultados</button>
+    </div>
+    
+    <!-- Modales -->
+    <div id="descartarModal" class="modal">
+      <div class="modal-content">
+        <p>¿Estás seguro de que quieres volver al menu sin guardar los resultados?</p>
+        <button onclick="descartarResultados()">Sí</button>
+        <button onclick="cerrarModal('descartarModal')">No</button>
+      </div>
+    </div>
+    
+    <div id="guardarModal" class="modal">
+      <div class="modal-content">
+        <!-- <span class="close" onclick="cerrarModal('guardarModal')">&times;</span> -->
+        <p>Los resultados fueron guardados con éxito.</p>
+        <button onclick="subirOtroVideo()">Subir otro video</button>
+        <button onclick="volverAlMenuPrincipal()">Volver al menú principal</button>
+      </div>
     </div>
   </main>
 </body>
+
 </html>
