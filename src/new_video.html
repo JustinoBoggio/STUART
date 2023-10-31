@@ -54,7 +54,7 @@
             </div>
             <!-- Botones al final de la página -->
             <div class="button-container">
-                <button class="back-button">Atras</button>
+                <button class="back-button" onclick="redirectToAnotherPage()">Atras</button>
                 <button class="process-button" onclick="startProcessing()">Procesar Video</button>
             </div>
             <!-- Modal para la barra de carga y el botón de cancelar -->
@@ -63,6 +63,15 @@
                     <span class="close" onclick="cancelProcessing()">&times;</span>
                     <p>Procesando video... <span id="progress">0%</span> completado</p>
                     <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+            <!-- Modal para cuando terminó de procesar el video -->
+            <div id="completionModal" class="modal-completed">
+                <div class="modal-content-completed">
+                    <p>¡La carga ha finalizado!</p>
+                    <p>¿Qué quieres hacer a continuación?</p>
+                    <button onclick="redirectToResults()">Ver resultados</button>
+                    <button onclick="uploadAnotherVideo()">Subir otro video</button>
                 </div>
             </div>
         </main>

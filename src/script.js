@@ -9,3 +9,8 @@ function getCurrentDate() {
   }
 // Actualizar el contenido del elemento con el ID "current-date" con la fecha actual
 document.getElementById('current-date').innerText = getCurrentDate();
+
+function redirectToAnotherPage() {
+  // Cambia 'otraPagina.html' por la URL de la página a la que deseas redirigir
+  window.location.href = 'new_video.html';
+}

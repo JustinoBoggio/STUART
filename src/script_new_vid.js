@@ -55,6 +55,7 @@ function displayFileDetails() {
     // Limpia el intervalo y oculta el modal
     clearInterval(processingInterval);
     document.getElementById('progress-modal').style.display = 'none';
+    showModal();
   }
   
   function cancelProcessing() {
@@ -69,3 +70,24 @@ function displayFileDetails() {
       progress = 0;
     }
   }
+
+  function redirectToAnotherPage() {
+    // Cambia 'otraPagina.html' por la URL de la página a la que deseas redirigir
+    window.location.href = 'index.html';
+  }
+
+function showModal() {
+    // Mostrar el modal
+    var modal = document.getElementById('completionModal');
+    modal.style.display = 'flex';
+}
+
+function redirectToResults() {
+    // El usuario seleccionó "Ver resultados"
+    window.location.href = 'results.html';
+}
+
+function uploadAnotherVideo() {
+    // El usuario seleccionó "Subir otro video" (recargar la página)
+    window.location.reload();
+}
