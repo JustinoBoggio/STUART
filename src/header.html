@@ -12,16 +12,21 @@
 <body>
     <header>
         <div class="logo-container">
-            <a href="index.html">
-                <img src="images/logoStuart.png" alt="Logo Stuart">
-                <img src="images/logoCerela.png" alt="Logo Cerela">
-            </a>
+            <img src="images/logoStuart.png" alt="Logo Stuart" onclick="redirectToIndex()">
+            <img src="images/logoCerela.png" alt="Logo Cerela" onclick="redirectToIndex()">
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
             <button type="button">Buscar</button>
         </div>
     </header>
+    <script>
+        function redirectToIndex() {
+        // Cambia 'otraPagina.html' por la URL de la página a la que deseas redirigir
+        window.location.href = 'index.html';
+      }
+    </script>
 </body>
+
 
 </html>

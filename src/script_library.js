@@ -23,48 +23,55 @@ function loadVideoList() {
     // Limpia la lista antes de agregar nuevos elementos
     videoListContainer.innerHTML = '';
 
-    // Itera sobre los datos y crea las filas de videos
-    videosData.forEach(video => {
-        const videoItem = document.createElement('div');
-        videoItem.classList.add('video-item');
+    if (videosData.length === 0) {
+        // No hay resultados, mostrar mensaje
+        const noResultsTitle = document.createElement('h2');
+        noResultsTitle.textContent = 'No hay resultados disponibles';
+        videoListContainer.appendChild(noResultsTitle);
+    } else {
+        // Itera sobre los datos y crea las filas de videos
+        videosData.forEach(video => {
+            const videoItem = document.createElement('div');
+            videoItem.classList.add('video-item');
 
-        // Icono de video
-        const videoIcon = document.createElement('div');
-        videoIcon.classList.add('video-icon');
-        videoIcon.innerHTML = '<i class="fas fa-video"></i>'; // Puedes cambiar el icono
+            // Icono de video
+            const videoIcon = document.createElement('div');
+            videoIcon.classList.add('video-icon');
+            videoIcon.innerHTML = '<i class="fas fa-video"></i>'; // Puedes cambiar el icono
 
-        // Nombre del video
-        const videoName = document.createElement('div');
-        videoName.textContent = video.name;
+            // Nombre del video
+            const videoName = document.createElement('div');
+            videoName.textContent = video.name;
 
-        // Sexo
-        const videoSex = document.createElement('div');
-        videoSex.textContent = video.sex;
+            // Sexo
+            const videoSex = document.createElement('div');
+            videoSex.textContent = video.sex;
 
-        // Botón "Ver Resultados"
-        const viewResultsBtn = document.createElement('button');
-        viewResultsBtn.textContent = 'Ver Resultados';
-        viewResultsBtn.setAttribute('href', 'index.html?source=library');
-        viewResultsBtn.addEventListener('click', () => viewResults(video.name));
+            // Botón "Ver Resultados"
+            const viewResultsBtn = document.createElement('button');
+            viewResultsBtn.textContent = 'Ver Resultados';
+            viewResultsBtn.setAttribute('href', 'index.html?source=library');
+            viewResultsBtn.addEventListener('click', () => viewResults(video.name));
 
-        // Botón "Eliminar"
-        const deleteBtn = document.createElement('button');
-        deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
-        deleteBtn.classList.add('delete-button');
-        //deleteBtn.textContent = 'Eliminar';
-        deleteBtn.addEventListener('click', () => deleteVideo(video.name));
+            // Botón "Eliminar"
+            const deleteBtn = document.createElement('button');
+            deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+            deleteBtn.classList.add('delete-button');
+            deleteBtn.addEventListener('click', () => deleteVideo(video.name));
 
-        // Agrega los elementos a la fila de video
-        videoItem.appendChild(videoIcon);
-        videoItem.appendChild(videoName);
-        videoItem.appendChild(videoSex);
-        videoItem.appendChild(viewResultsBtn);
-        videoItem.appendChild(deleteBtn);
+            // Agrega los elementos a la fila de video
+            videoItem.appendChild(videoIcon);
+            videoItem.appendChild(videoName);
+            videoItem.appendChild(videoSex);
+            videoItem.appendChild(viewResultsBtn);
+            videoItem.appendChild(deleteBtn);
 
-        // Agrega la fila de video al contenedor
-        videoListContainer.appendChild(videoItem);
-    });
+            // Agrega la fila de video al contenedor
+            videoListContainer.appendChild(videoItem);
+        });
+    }
 }
+
 
 // Función para simular ver resultados
 function viewResults(videoName) {
